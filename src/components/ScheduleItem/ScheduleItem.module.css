@@ -1,0 +1,19 @@
+.cart{
+    border: 1px solid black;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #9BDDFA;
+    padding: 10px;
+}
+.item{
+   display: flex; 
+   justify-content: space-between;
+   margin-bottom: 10px;
+}
+.item:last-child{
+    margin-bottom: 0px;
+ }
+.info{
+    display: flex;
+    background-color: white;
+}

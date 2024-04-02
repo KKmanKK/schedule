@@ -1,4 +1,23 @@
 .wrapper{
-    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+}
+.column{
+    max-width: 500px;
     width: 100%;
+    text-align: center;    
+}
+@media(max-width:800px){
+    .wrapper{
+        display: block;
+    }
+    .column{
+    max-width: 700px;
+}
+}
+@media(max-width:425px){
+    .column{
+        width: 400px;
+    }
 }

@@ -13,11 +13,16 @@ const week:any={
     5:"Суббота"
 }
 export const ScheduleList:FC<IScheduleListProps> = ({data}) => {
-    // console.log(data.map(el=>Array.from(el).slice(0,5)))
   return (
-    <div className={styles.wrapper}>
-        {data.slice(0,6).map((el,index)=><Scheduleitem week={week[index]}data={Array.from(el)}/>)}
-        {data.slice(6,12).map((el,index)=><Scheduleitem week={week[index]}data={Array.from(el)}/>)}
-    </div>
+    <section className={styles.wrapper}>
+      <div className={styles.column}>
+        Четная
+        {data.slice(0,6).map((el,index)=><Scheduleitem key={index} week={week[index]}data={Array.from(el)}/>)}
+      </div>
+      <div className={styles.column}>
+        Нечетная
+        {data.slice(6,12).map((el,index)=><Scheduleitem key={index} week={week[index]}data={Array.from(el)}/>)}
+      </div>
+    </section>
   )
 }

@@ -6,38 +6,33 @@ interface IScheduleitemProps{
 }
 
 export const Scheduleitem:FC<IScheduleitemProps> = ({data,week}) => {    
-  console.log(data.map(el=>{
-    if(!el){
-        return "_"
-    }
-    return el.split("|")
-}))
+
   return (
-    <>
-    {week}
+    <div className={styles.wrapper}>
+    <div className={styles.week}><div className={styles.week_item}>
+    {week}</div></div>
     <div className={styles.cart}>{data.map(el=>{
         if(!el){
-            return "_"
+            return;
         }
         if(el.split("|").length===1){
           return (
-            <div className={styles.item}>
-              <div>{el.split("|")}</div>
-              <div></div>
+            <div key={el} className={styles.item}>
+              <div  className={styles.time}>{el.split("|")}</div>
             </div>
           )
         }        
         return (          
-          <div className={styles.item}>
-            <div className={styles.time}>{el.split("|")[3]}</div>
+          <div  key={el} className={styles.item}>
+            <div className={styles.time}>{el.split("|")[0]}</div>
           <div className={styles.info}>
-            <div>{el.split("|")[0]}</div>
-            <div>{el.split("|")[2]}</div>
-            <div>{el.split("|")[1]}к</div>
+            <div>{el.split("|")[1]}</div>
+            <div>{el.split("|")[3]}</div>
+            <div>{el.split("|")[2]}к</div>
           </div>
           </div>
         )
     })}</div>
-    </>
+    </div>
   )
 }

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import styles from "./ScheduleList.module.css"
 import { Scheduleitem } from '../ScheduleItem/Scheduleitem'
 interface IScheduleListProps{

@@ -2,7 +2,7 @@ import * as XLSX from "xlsx";
 
 export const readExcel= ():any=>{
  
-    return new Promise(async (resolve,reject)=>{
+    return new Promise(async (resolve)=>{
       const res =  await fetch("http://localhost:5173/Prepodavateli.xlsx");
       console.log();
       

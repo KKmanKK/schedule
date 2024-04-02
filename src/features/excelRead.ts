@@ -3,7 +3,7 @@ import * as XLSX from "xlsx";
 export const readExcel= ():any=>{
  
     return new Promise(async (resolve)=>{
-      const res =  await fetch("https://kkmankk.github.io/schedule/");
+      const res =  await fetch("https://kkmankk.github.io/schedule/Prepodavateli.xlsx");
       console.log();
       
       const reader = new FileReader();

@@ -3,7 +3,7 @@ import * as XLSX from "xlsx";
 export const readExcel= ():any=>{
  
     return new Promise(async (resolve)=>{
-      const res =  await fetch("http://localhost:5173/Prepodavateli.xlsx");
+      const res =  await fetch("https://kkmankk.github.io/schedule/");
       console.log();
       
       const reader = new FileReader();
@@ -47,7 +47,6 @@ export const readExcel= ():any=>{
         resolve(arrData)
       }
       res.blob().then(data => reader.readAsBinaryString(data))
-      // reader.readAsBinaryString(files);
 
     })
     
